@@ -1,0 +1,1947 @@
+
+$color_cheese_bg_blue : #6ed8e6
+$color_cheese_bg_dark_blue : #1a7291    
+$color_white : #ffffff
+$color_cheese_red : #eb6860
+$color_line_red : #c7423a
+$color_cheese_yellow : #ffe491
+$color_cheese_pink : #ffe7e6
+$color_aptinet_bg_blue : #118cb8
+$color_brown : #968756
+$color_hunter_pink : #ffabb7
+$color_mala_word : #1f5d73
+$color_mala_game_bg : #39bbcc
+$color_mala_menu_bg : #ffccc9
+$color_menu_blue : #14a5b8
+$color_holi_word : #114b5f
+@mixin size($w,$h)
+  width : $w 
+  height : $h
+  
+@mixin ab_center
+  position: absolute
+  left : 50%
+  top : 50%
+  transform : translate(-50%,-50%)
+
+
+html,body
+  margin : 0
+  overflow-x : hidden
+
+*
+  font-family: '源柔ゴシックX', sans-serif
+.title
+  font-size : 30px
+  line-height : 50pt
+p
+  font-size: 15px
+  line-height : 50pt
+
+
+
+//debug
+*
+  // border: solid 1px black !important
+  header,section
+    // display: none
+  header#header_mala_index
+    display: block
+
+.cloud
+  position: absolute
+  animation: cloud 5s infinite linear
+
+
+header#header_cheese_index
+  background-color: $color_cheese_bg_blue
+  position : relative
+  text-align: center
+
+  .cloud1
+    width : 15%
+    top : 0%
+    animation-delay: -0.3s
+  .cloud2
+    width : 20%
+    top : 8%
+    transform : rotate(180deg)
+    animation-delay: -2s
+  .cloud3
+    width : 15%
+    top : 35%
+    animation-delay: -1s
+  .cheese_header_bottom
+    width : 100%
+.explore
+  +ab_center
+  top : 95%
+  color : $color_white
+  font-size: 15px
+  opacity : 0
+  transition : 0.5s
+  &::after
+    content : "V"
+    display : block
+    transform : scaleX(1.2) scaleY(0.5)
+  
+  @keyframes upin
+    0%
+      bottom : -100px
+    100%
+      bottom : 0px
+
+  &.at_top
+    opacity : 1
+
+.leading
+  color : $color_white
+  padding : 150px 0px
+  font-size : 25pt
+
+nav.navbar
+  transition : 0.5s
+  a
+    transition : 0.5s
+// 上方導覽列透明
+.navbar-default
+  background-color: $color_cheese_bg_blue
+nav.navbar.at_top
+  background-color: transparent
+  
+  a,a:visited
+    color : white
+.navbar-brand
+  position: relative
+.logo
+  width : 50%
+.cheese_logo
+  width : 30px 
+  position: absolute
+  top : 15px
+  left : 50.5%
+.aptinet_logo
+  width : 25px
+  position: absolute
+  top : 11px
+  left : 52%
+.festival
+  position: absolute
+  top : 15px
+  left : 61%
+  color : $color_white
+// 區域共同設定  
+section
+  padding: 60px
+  position: relative
+// ---------------------------      
+section#section_cheese_video
+  background-color: $color_cheese_bg_blue
+  padding : 0
+
+  .cheese_video_tree_left,.cheese_video_tree_right
+    width : 13.9%
+    position: absolute
+    bottom : -3px
+  .cheese_video_tree_right
+    width : 21.2%
+    right : 0
+
+.video
+  padding : 350px 0px
+
+.play_btn
+  +size(150px,150px)
+  border-radius: 50%
+  background-color: $color_white
+  +ab_center
+  .tri
+    border-right: 50px solid transparent
+    border-left : 50px solid $color_cheese_bg_dark_blue
+    border-bottom : 50px solid transparent
+    border-top : 50px solid transparent
+    position: absolute
+    left : 50%
+    top : 50%
+    transform: translate(-20%,-50%)
+
+section#section_cheese_about
+  background-color: $color_cheese_bg_blue
+  padding : 0
+  position: relative
+  .cheese_about_bg
+    position: relative
+  .flyman
+    width : 15%
+    position: absolute
+    left : 40%
+    bottom : 40%
+  .cloud4
+    width : 15%
+    top : 0
+    animation-delay: -0.3s
+  .cloud5
+    width : 13%
+    top : 30%
+    animation-delay: -1s
+  .cloud6
+    width : 20%
+    top : 0%
+    animation-delay: -1.8s
+
+
+@keyframes cloud
+  0%
+    left : 0%
+    opacity: 0
+  100%
+    left : 100%
+    opacity: 1
+
+section#section_cheese_intro
+  background-color: $color_cheese_bg_blue
+  padding : 0
+
+  .cheese_intro_bg
+    position: relative
+
+  .cloud7
+    width : 10%
+    animation-delay : -1.5s
+  .cloud8
+    width : 15%
+    top : 25%
+    animation-delay: -2.3s
+
+  .cheese_intro_place
+    position: absolute
+    top : 10%
+    left : 20%
+    color : $color_white
+  .cheese_intro_time
+    position: absolute
+    top : 30%
+    left : 20%
+    color : $color_white
+
+.cheese
+  position: absolute
+  +size(80px,80px)
+  border-radius : 50%
+  background-color: $color_cheese_yellow
+  overflow: hidden
+  .cheese_circle
+    border-radius : 50%
+    position: absolute
+    background-color: $color_cheese_red
+  .c1
+    +size(20px,20px)
+    top : 30%
+    left : 10%
+  .c2
+    +size(30px,30px)
+    top : 50%
+    right : 20%
+  .c3
+    +size(30px,30px)
+    top : 0
+    right : 10%
+  .line
+    +ab_center
+    background-color: $color_line_red
+    border : 5px solid $color_white
+  .l1
+    +size(120px,20px)
+  .l2
+    +size(20px,120px)
+
+.scroll_cheese_intro
+  offset-path: path('M0,282.54s65-22.67,106.5-4c15.12,6.8,27,26.59,34.5,41.38,8.59,16.95,24.91,97,33,147.12,11.61,71.89,3,108.5,86,110.5s441.36-35.94,524-32,144.07-22,163.46-48.5,33-66,33-66,49.26-235.85,159-334.5c94.55-85,158.29,105,174,166,15.2,59.11,60.85,226.21,99.49,74.56,4.14-16.22,13.73-29.59,24.07-37.56,26.14-20.16,74.5-10.5,84.52,48.38,1,5.61,3.55,10.82,5.21,16.27,3.22,10.63,18.17,49.68,64.1,50')
+  offset-distance : 0%
+  animation: scroll_cheese_intro 5s infinite alternate linear
+  @keyframes scroll_cheese_intro
+      0%
+        offset-distance : 0%
+      100%
+        offset-distance : 100%
+        transform: rotate(1800deg)
+
+section#section__cheese_origin
+  background-color: $color_cheese_bg_dark_blue
+  position: relative
+  .cheese_origin
+    color : $color_white
+    padding : 150px
+    
+  .cheese_origin_castle
+    position: absolute
+    width : 90%
+    bottom : 0
+    right : 0
+  .scroll_cheese_origin
+    animation: scroll_cheese_origin 4s infinite linear
+    @keyframes scroll_cheese_origin
+      0%
+        right : 10%
+        top : 12%
+        transform: rotate(0deg)
+      20%
+        right : 30%
+        top : 28%
+        transform: rotate(-360deg)
+      40%
+        right : 10%
+        top : 35%
+        transform: rotate(0deg)
+      60%
+        right : 35%
+        top : 58%
+        transform: rotate(-360deg)
+      62%
+        right: 35%
+        top: 61%
+      80%
+        right : 20%
+        top : 73%
+        transform: rotate(0deg)
+      100%
+        right : -10%
+        top : 75%
+        transform: rotate(540deg)
+
+        
+section#section_cheese_feature
+  background-color: $color_cheese_bg_dark_blue
+  color : $color_white
+
+  .cheese_feature_top
+    position: absolute
+    top : -2.3px
+    right : 0
+    width : 90%
+
+  .cheese_feature
+    margin : 10%
+    padding : 0px 120px
+
+  .scroll_cheese_feature
+    animation: scroll_cheese_feature 4s infinite alternate linear
+    @keyframes scroll_cheese_feature
+      0%
+        left : 0%
+        bottom : 0%
+        transform: rotate(0deg)
+      100%
+        left : 100%
+        bottom : 0%
+        transform: rotate(1800deg)
+  .cheese_feature_bottom
+    position: absolute
+    bottom : 0
+    left : 0
+    width : 100%
+
+section#section_cheese_game
+  background-color: $color_cheese_pink
+.game
+  +size(700px,500px)
+  background-color: $color_white
+  margin-right: auto
+  margin-left: auto
+
+section#section_cheese_menu
+  background-color: $color_cheese_bg_blue
+  padding : 150px
+.menu
+  position: relative
+  +size(150px,150px)
+  background : linear-gradient(45deg,$color_menu_blue 50%,$color_mala_game_bg  50%,$color_mala_game_bg  100%)
+  border-radius : 50%
+  cursor : pointer
+  margin-right: auto
+  margin-left: auto
+.cheese_menu
+  +ab_center
+  +size(100px,100px)
+  background-image : url(../image/menu_cheese-10.svg)
+  transition-duration: 0.3s
+.aptinet_menu
+  +ab_center
+  +size(100px,102px)
+  background-image : url(../image/menu_aptinet-10.svg)
+  transition-duration: 0.3s
+.holi_menu
+  +ab_center
+  +size(109px,100px)
+  background-image : url(../image/menu_holi-10.svg)
+  transition-duration: 0.3s
+.mala_menu
+  position: absolute
+  top : 60%
+  left : 60%
+  transform: translate(-60%,-60%)
+  +size(97px,90.5px)
+  background-image : url(../image/menu_mala-10.svg)
+  transition-duration: 0.3s
+.col-sm-3
+  text-align: center
+  color : $color_white
+  &:hover
+    .cheese_menu
+      +size(110px,86px)
+      background-image : url(../image/menu_cheese_hover-10.svg)
+    .aptinet_menu
+      left : 53%
+      +size(89px,100px)
+      background-image : url(../image/menu_aptinet_hover-10.svg)
+    .holi_menu
+      +size(130px,70px)
+      background-image : url(../image/menu_holi_hover-10.svg)
+    .mala_menu
+      +ab_center
+      +size(67px,108px)
+      background-image : url(../image/menu_mala_hover-10.svg)
+footer#footer_cheese
+  background-color: $color_cheese_yellow
+  position: relative
+  padding-top : 30px
+.cheese_footer_logo
+  background-color: $color_cheese_bg_blue
+.footer_logo
+  position: relative
+  +size(100px,100px)
+  background-color: $color_menu_blue
+  border-radius : 50%
+  margin-right: auto
+  margin-left: auto
+.cheese_footer
+  +size(70px,70px)
+  +ab_center
+.footer
+  margin : 30px 50%
+  transform: translateX(-50%)
+  width : 15%
+
+
+// 青森睡魔祭
+
+header#header_aptinet_index
+  background-color: $color_cheese_bg_dark_blue
+  position : relative
+  text-align: center
+
+  .leading
+    padding : 150px 0px
+  .aptinet_header_bottom
+    width : 100%
+    margin-bottom : 150px
+  .water_latern
+    position: absolute
+  .water_latern_big
+    width : 7%
+  .water_latern_medium
+    width : 5.5%
+  .water_latern_small
+    width : 3%
+  .w_l1
+    left : 15%
+    bottom : 9%
+  .w_l2
+    left : 35%
+    bottom : 7%
+  .w_l3
+    left : 48%
+    bottom : 2%
+  .w_l4
+    right : 7%
+    bottom : 3%
+  .w_l5
+    left : 3%
+    bottom : 20%
+  .w_l6
+    left : 30%
+    bottom : 25%
+  .w_l7
+    left : 48%
+    bottom : 20%
+  .w_l8
+    right : 32%
+    bottom : 15%
+  .w_l9
+    width : 5%
+    right : 28%
+    bottom : 28%
+  .w_l10
+    right : 10%
+    bottom : 20%
+  .w_l11
+    left : 11%
+    bottom : 42%
+  .w_l12
+    width : 4%
+    left : 23%
+    bottom : 35%
+  .w_l13
+    left : 41%
+    bottom : 37%
+  .w_l14
+    right : 42%
+    bottom : 42%
+  .w_l15
+    right : 38.5%
+    bottom : 39%
+  .w_l16
+    right : 15%
+    bottom : 42%
+  .w_l17
+    right : 2%
+    bottom : 36%
+section#section_aptinet_video
+  background-color: $color_cheese_bg_dark_blue
+  padding : 0
+  .petal
+    width : 5%
+    position: absolute
+    right : 10%
+    bottom : 35%
+
+section#section_aptinet_about
+  background-color: $color_cheese_bg_dark_blue
+  position: relative
+  padding : 0
+  .aptinet
+    position: absolute
+    color : $color_white
+    font-size: 40pt
+    right : 18%
+    top : 30%
+  .aptinet_about_bottom
+    position: absolute
+    width : 30%
+    right : 0
+    top : -10%
+  .nebutasai
+    margin-top : -20%
+    width : 100%
+  #nebutasai_face
+    position: absolute
+    width : 30%
+    left : 5%
+    top : 2%
+
+section#section_aptinet_intro
+  background-color: $color_cheese_bg_dark_blue
+  position: relative
+  .petal_intro1
+    width : 5%
+    position: absolute
+    top : -12%
+    left : 28%
+  .petal_intro2
+    width : 8%
+    position: absolute
+    top : 10%
+    right : 10%
+  .petal_intro3
+    width : 4%
+    position: absolute
+    left : 3%
+    bottom : 10%
+  .petal_intro4
+    width : 3%
+    position: absolute
+    left : 8%
+    bottom : 20%
+  .petal_intro5
+    width : 6%
+    position: absolute
+    right : 35%
+    bottom : 5%
+
+
+  .aptinet_goldenfish_r
+    position: absolute
+    top : -10%
+    right : 20%
+    width : 150px
+    animation: goldenfish_r 6s infinite linear
+  .aptinet_goldenfish_r1
+    position: absolute
+    bottom : 0%
+    right : 0
+    width : 200px
+    animation: goldenfish_r 6s infinite linear
+    animation-delay: -8.5s
+  .aptinet_goldenfish_l
+    position: absolute
+    width : 110px
+    left : 12%
+    bottom : 10%
+    animation: goldenfish_l 5s infinite linear
+    animation-delay: -0.8s
+  .aptinet_intro
+    position: relative
+    color : $color_white
+    padding : 50px 20%
+  .aptinet_intro_bottom
+    position: absolute
+    right : 0
+    bottom : 0
+    width : 500px
+
+@keyframes goldenfish_r
+  0%
+    right : 0
+    transform: translateY(0px)
+  10%
+    transform: translateY(10px)
+  20%
+    transform: translateY(0px)
+  30%
+    transform: translateY(10px)
+  40%
+    transform: translateY(0px)
+  50%
+    transform: translateY(10px)
+  60%
+    transform: translateY(0px)
+  70%
+    transform: translateY(10px)
+  80%
+    transform: translateY(0px)
+  90%
+    transform: translateY(10px)
+  100%
+    right : 100%
+    transform: translateY(0px)
+@keyframes goldenfish_l
+  0%
+    left : 0%
+    top : 30%
+    transform: translateY(0px)
+  10%
+    transform: translateY(10px)
+  20%
+    transform: translateY(0px)
+  30%
+    transform: translateY(10px)
+  40%
+    transform: translateY(0px)
+  50%
+    top : 40%
+    transform: translateY(10px)
+  60%
+    transform: translateY(0px)
+  70%
+    transform: translateY(10px)
+  80%
+    transform: translateY(0px)
+  90%
+    transform: translateY(10px)
+  100%
+    top : 45%
+    left : 100%
+    transform: translateY(0px)
+    
+
+section#section_aptinet_origin
+  background-color: $color_cheese_bg_dark_blue
+  color : $color_white
+  position: relative
+  padding : 0px
+
+  .aptinet_origin_top
+    position: absolute
+    width : 408px
+    right : 0
+    top : -3px
+
+  .latern_first
+    right : 350px
+    top : 0%
+  .latern_second
+    right : 240px
+    top : 60px
+  .latern_third
+    right : 130px
+    top : 40px
+
+  .latern
+    position: absolute
+    cursor : pointer
+    .rope
+      +size(5px,80px)
+      background-color: $color_brown
+    .bright
+      +size(60px,60px)
+      background-color: yellow
+      border-radius : 50%
+      position: absolute
+      transform: translate(-43%,40%)
+      opacity : 0
+      transition-duration: 0.5s
+    .second_bright
+      +size(70px,70px)
+      transform: translate(-45%,30%)
+      transition-delay: 0.3s
+    .goldenfish_latern
+      width : 80px
+      position: absolute
+      transform: translateX(-45%)
+    &:hover
+      .bright
+        opacity : 0.2
+      .goldenfish_latern
+        filter : brightness(1.1)
+    
+  .aptinet_origin
+    margin : 150px 100px
+
+  .aptinet_origin_bottom
+    height : 290px
+
+section#section_aptinet_feature
+  background-color: $color_white
+  color : $color_brown
+  position: relative
+  padding : 0px
+
+  .aptinet_bell
+    position: absolute
+    top : -170px
+    left : 160px
+    .rope_bell
+      +size(5px,150px)
+      background-color: $color_brown
+      transform-origin : top
+      animation : rope_swing 6s linear infinite
+    .ring_bell
+      +size(80px,80px)
+      +ab_center
+      top : 120%
+      animation: ring_swing 6s infinite linear
+
+
+  @keyframes rope_swing
+    0%
+      transform: rotate(0deg)
+    20%
+      transform: rotate(10deg)
+    40%
+      transform: rotate(-10deg)
+    50%
+      transform: rotate(10deg)
+      opacity : 1
+    55%
+      opacity : 0
+    100%
+      opacity : 0
+
+  @keyframes ring_swing
+    0%
+      transform: translate(-40px,-40px) rotate(0deg)
+    20%
+      transform: translate(-70px,-38px) rotate(10deg)
+    40%
+      transform: translate(-5px,-38px) rotate(-10deg)
+    45%
+      transform: translate(-40px,-40px) rotate(0deg)
+      top : 120%
+      left : 0
+    60%
+      top : 750px
+      left : 0
+      transform: rotate(20deg)
+    70%
+      top : 680px
+      left : -50px
+      transform: rotate(30deg)
+    80%
+      top : 770px
+      left : -100px
+      transform: rotate(40deg)
+    90%
+      top : 800px
+      left : -150px
+    100%
+      top : 1000px
+      left : -300px
+
+  .aptinet_feature_petal1
+    position: absolute
+    width : 5%
+    left : 5%
+    bottom : 30%
+  .aptinet_feature_petal2
+    position: absolute
+    width : 4%
+    top : 0
+    left : 10%
+  .aptinet_feature_petal3
+    position: absolute
+    width : 2%
+    top : -20px
+    left : 45%
+  .aptinet_feature_petal4
+    position: absolute
+    width : 6%
+    right : 8%
+    top : 10%
+  .aptinet_feature_petal5
+    position: absolute
+    width : 2%
+    right : 5%
+    top : 12%
+  .aptinet_feature_petal6
+    position: absolute
+    width : 4%
+    left : 25%
+    top : 30%
+  .aptinet_feature_petal7
+    position: absolute
+    width : 3%
+    left : 46%
+    top : -90px
+  .aptinet_feature_petal8
+    position: absolute
+    width : 4%
+    right : 38%
+    bottom : 30%
+  .aptinet_feature_petal9
+    position: absolute
+    width : 3%
+    right : 7%
+    bottom : 40%
+
+
+  .aptinet_feature
+    position: relative
+    padding : 50px 50px
+    .title,p
+      padding : 0px 120px
+
+  .aptinet_feature_bottom
+    bottom : 0
+
+
+section#section_aptinet_game
+  background-color: $color_cheese_pink
+
+section#section_aptinet_menu
+  background-color: $color_cheese_yellow
+  padding : 150px 0px
+  p
+    color : $color_brown
+
+footer#aptinet_footer
+  background-color : $color_aptinet_bg_blue
+  padding-top : 30px
+  .aptinet_footer_logo
+    background-color: $color_mala_word
+  .aptinet_footer
+    +size(70px,70px)
+    +ab_center
+
+//布農族打耳祭
+
+header#header_mala_index
+  background-color: $color_cheese_bg_blue
+  text-align: center
+  position: relative
+  .leading
+    position: relative
+    padding : 170px 0px
+    top : 50px
+  .mala_dark_tree,.mala_light_tree
+    position: absolute
+    width : 14.5%
+  .mala_dark_tree
+    bottom : 6%
+    left : 14.5%
+  .mdt1
+    left : 36.5%
+    bottom : 3%
+  .mdt2
+    left : 56%
+    bottom : 7%
+  .mdt3
+    left : 75%
+    bottom : 2%
+  .mala_light_tree
+    bottom : 6%
+    left : 1%
+  .mlt1
+    left : 25%
+    bottom : 10%
+  .mlt2
+    left : 44%
+    bottom : 6%
+  .mlt3
+    left : 63.5%
+    bottom : 0%
+  .mlt4
+    left : 87%
+    bottom : 5%
+  .mask
+    +size(100%,90%)
+    background-color: $color_cheese_bg_blue
+    position: absolute
+    left : 0
+    opacity : 0.5
+
+  .mala_hunter
+    width : 30%
+    position: absolute
+    bottom : -23%
+    left : -5%
+    z-index : 1
+
+  .mala_deer
+    width : 15%
+    position: absolute
+    bottom : 19%
+    right : 5%
+  .mala_header_bottom_light
+    position: absolute
+    bottom : 0
+    left : 0
+
+
+section#section_mala_video
+  background-color : $color_cheese_bg_blue
+  z-index: 2
+
+  .mala_video_bottom
+    position: absolute
+    bottom : 0
+    left : 0
+
+  .mala_cloud1
+    width : 15%
+    top : 20%
+    animation-delay: -1.5s
+  .mala_cloud2
+    width : 10%
+    top : 5%
+    animation-delay: -0.3s
+  .mala_cloud3
+    width : 16%
+    bottom : 8%
+    animation-delay: -2s
+
+section#section_mala_about
+  background-color: $color_cheese_bg_blue
+  padding : 0
+  position: relative
+  .mala_about_bg1
+    position: relative
+  .mala_about_bg2
+    position: absolute
+  .mala_about_bg3
+    position: absolute
+    bottom : 0
+    z-index : 5
+  .mala_about_cloud
+    width : 10%
+    position: absolute
+    top : 20%
+    animation : mala_about_cloud 4s infinite linear
+    @keyframes mala_about_cloud
+      0%
+        opacity : 0
+        left : 0
+      100%
+        opacity : 1
+        left : 65%
+        
+  .mala_about_hunter1
+    width : 5%
+    position: absolute
+    transition-duration: 0.5s
+  .mala_about_hunter2
+    width : 5%
+    position: absolute
+    transition-duration: 0.8s
+  .mala_about_hunter3
+    width : 8%
+    position: absolute
+    transform: rotate(45deg)
+    left : 14%
+    transition-duration: 0.3s
+  .mala_about_deer
+    +size(17.4%,72%)
+    position: absolute
+    bottom : 0
+    left : 50%
+    cursor : pointer
+    transform: translateX(-50%)
+    background-image: url(../../image/mala_deer_lookback.svg)
+
+section#section_mala_intro
+  background-color: $color_cheese_bg_blue
+  position: relative
+  color : $color_mala_word
+  .mala_intro_top
+    position: absolute
+    width : 63%
+    top : -3px
+    left : 45.5%
+    transform: translateX(-50%)
+
+  .container
+    position: relative
+    padding : 350px 0px
+    .mala_intro
+      position: absolute
+      left : 50%
+      transform: translateX(-50%)
+      top : 15%
+  .mala_intro_bottom
+    position: absolute
+    bottom : 0
+    left : 0
+  .mala_intro_tree1
+    width : 8%
+    left : 5%
+    bottom : 0
+    position: absolute
+  .mala_intro_tree2
+    width : 10%
+    left : -3%
+    bottom : 0
+    position: absolute
+  .mala_intro_tree3
+    width : 8%
+    right : 10%
+    bottom : 0
+    position: absolute
+  .mala_intro_tree4
+    width : 12%
+    right : -6%
+    bottom : 0
+    position: absolute
+  .mala_intro_tree5
+    width : 10%
+    right : 3%
+    bottom : 0
+    position: absolute
+  .mala_intro_cloud1
+    width : 15%
+  .mala_intro_cloud2
+    top : 20%
+    width : 13%
+    animation-delay: -1.5s
+  .mala_intro_cloud3
+    width : 10%
+    bottom : 38%
+    animation-delay: -1s
+  .mala_catcher
+    width: 6%
+    position: absolute
+    bottom : 4%
+    left : 19%
+    animation : catcher 4s infinite linear
+  .mala_meat
+    position: absolute
+    width : 8%
+    bottom : 20%
+    left : 18%
+    animation: meat_falling 4s infinite linear
+  .meat1
+    animation: meat_falling_down 5s infinite cubic-bezier(0.7,0.5,0.3,0.1)
+  .meat2
+    left : 60%
+    animation-delay : -1.5s
+  .meat3
+    left : 80%
+    animation: meat_falling_down 6s infinite cubic-bezier(0.7,0.5,0.3,0.1)
+    animation-delay: -3s
+  .meat4
+    left : 49%
+    animation : meat_falling 4s infinite linear
+    animation-delay : -0.3s
+
+@keyframes catcher
+  0%
+    left : 35%
+    transform: translateY(0px)
+  10%
+    transform: translateY(10px)
+  20%
+    transform: translateY(0px)
+  30%
+    left : 61%
+    transform: translateY(0px)
+  40%
+    transform: translateY(0px)
+  45%
+    transform: translateY(10px)
+  60%
+    left : 61%
+    transform: translateY(10px)
+  70%
+    left : 50%
+    transform: translateY(0px)
+  75%
+    transform: translateY(10px)
+  85%
+    left : 50%
+  100%
+    left : 35%
+    transform: translateY(0px)
+
+@keyframes meat_falling
+  0%
+    opacity : 0
+    bottom : 100%
+  10%
+    opacity : 1
+  80%
+    opacity : 1
+    bottom : 20%
+    opacity : 1
+  93%
+    opacity : 0.9
+  94%
+    opacity : 0
+  100%
+    bottom : 20%
+    opacity : 0
+@keyframes meat_falling_down
+  0%
+    opacity : 0
+    bottom : 100%
+  10%
+    opacity : 1
+  80%
+    opacity : 1
+    bottom : 10%
+    transform: rotate(0deg)
+  90%
+    bottom : 12%
+    transform: rotate(-15deg)
+  91%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(15deg)
+    bottom : 10%
+    
+    
+
+section#section_mala_origin
+  background-color: $color_cheese_bg_blue
+  color : $color_mala_word
+  .mala_origin
+    margin : 150px 0px
+    padding : 0px 120px
+  .mala_origin_hunter
+    width : 20%
+    position: absolute
+    right : 10%
+    top : 0
+section#section_mala_feature
+  background-color: $color_cheese_bg_blue
+  color : $color_mala_word
+  padding : 0
+  .mala_feature_1,.mala_feature_2
+    position: relative
+    padding : 0px 120px
+  .mala_feature_2
+    margin-top: 150px
+
+  .mala_feature_cloud1
+    width : 15%
+    top : 10%
+  .mala_feature_cloud2
+    width : 19%
+    top : 25%
+    animation-delay: -1.8s
+  .mala_feature_cloud3
+    width : 12%
+    top : 46%
+    animation-delay: -0.5s
+  .mala_feature_cloud4
+    width : 16%
+    top : 55%
+    animation-delay: -2.5s
+  .mala_feature_cloud5
+    width : 15%
+    top : 80%
+  .mala_origin_bottom
+    position: relative
+    width : 1520px
+  .mala_origin_tree
+    position: absolute
+    width : 3%
+  .tree1
+    left : -10px
+    bottom : 260px
+  .tree2
+    bottom : 110px
+    left : 180px
+  .tree3
+    width : 2.5%
+    left : 250px
+    bottom : 100px
+  .tree4
+    width : 2.5%
+    left : 310px
+    bottom : 120px
+  .tree5
+    width : 2%
+    left : 400px
+    bottom : 100px
+  .tree6
+    width : 2%
+    left : 650px
+    bottom : 30px
+  .tree7
+    left : 700px
+    bottom : 20px
+  .tree8
+    width : 2%
+    left : 1100px
+    bottom : 60px
+  .tree9
+    width : 3.5%
+    left : 1170px
+    bottom : 60px
+  .tree10
+    width : 2%
+    left : 1250px
+    bottom : 140px
+  .tree11
+    width : 2.5%
+    left : 1300px
+    bottom : 160px
+  .tree12
+    width : 2%
+    left : 1390px
+    bottom : 150px
+  .tree13
+    left : 1445px
+    bottom : 110px
+
+section#section_mala_game
+  background-color: $color_mala_game_bg
+
+section#section_mala_menu
+  padding : 150px
+  background-color : $color_mala_menu_bg
+  p
+    color : $color_mala_word
+
+footer#footer_mala
+  background-color: $color_cheese_bg_blue
+  padding-top : 50px
+  .mala_footer_logo
+    background-color: $color_menu_blue
+  .mala_footer
+    +size(70px,70px)
+    +ab_center
+
+//荷麗節
+
+header#header_holi_index
+  background-color : $color_mala_game_bg
+  text-align: center
+  position: relative
+  .leading
+    +ab_center
+    top : 35%
+    width : 100%
+  .holi_index_bg1
+    bottom : 0
+  .holi_index_bg
+    position: absolute
+    bottom : 0
+    left : 10%
+    width : 80%
+  .explore
+    top : 65%
+  
+section#section_holi_video
+  background-color: $color_mala_game_bg
+
+
+section#section_holi_about
+  background-color: $color_mala_game_bg
+  padding : 0
+  position: relative
+
+  .holi_about_bg1
+    position: relative
+
+  .holi_about_front_rcloud
+    position: absolute
+    right : 0%
+    width : 22%
+    bottom : 13%
+  .holi_about_front_lcloud
+    position: absolute
+    width : 56%
+    bottom : 13%
+    left : -3%
+  .holi_about_back_cloud
+    position: absolute
+    width : 75%
+    right : 0
+    top : -10%
+  .holi_man1
+    position: absolute
+    width : 20%
+    right : 5%
+    top : 12%
+    transform: rotate(-10deg)
+  .holi_man2
+    +ab_center
+    width : 15%
+    left : 47%
+  .holi_man3
+    position: absolute
+    width : 20%
+    right : 10%
+    bottom : 15%
+  .holi_man4
+    position: absolute
+    width : 20%
+    left : 6%
+    bottom : 18%
+
+section#section_holi_intro
+  background-color: $color_cheese_bg_blue
+  color : $color_white
+
+  .holi_intro_top
+    position: absolute
+    top : -1px
+    width : 50%
+    left : 14.6%
+
+  .holi_intro
+    padding : 150px 100px
+
+  .holi_castle
+    position: absolute
+    right : 0%
+    bottom : 0%
+    width : 60%
+
+  .holi_cloud
+    position: absolute
+    top : 45%
+    +size(60px,30px)
+    background-color: $color_white
+    &::before
+      content : ""
+      position: absolute
+      +size(30px,30px)
+      background-color: $color_white
+      border-radius: 50%
+      transform: translateX(150%)
+    &::after
+      content : ""
+      position: absolute
+      +size(30px,30px)
+      background-color: $color_white
+      border-radius: 50%
+      transform: translateX(-50%)
+  .holi_cloud1
+    position: absolute
+    top : 15%
+    width : 10%
+    animation-delay: -1.5s
+  .holi_cloud2
+    position: absolute
+    top : 30%
+    animation-delay: -3s
+    .top
+      +size(60px,30px)
+      background-color: $color_white
+      &::before
+        content : ""
+        position: absolute
+        +size(30px,30px)
+        background-color: $color_white
+        transform: translateX(-50%)
+        border-radius: 50%
+      &::after
+        content : ""
+        position: absolute
+        +size(30px,30px)
+        background-color: $color_white
+        transform: translateX(150%)
+        border-radius: 50%
+    .bottom
+      +size(65px,30px)
+      position: absolute
+      transform: translate(50%,-50%)
+      background-color: $color_white
+      border-radius: 20%
+      &::after
+        content : ""
+        position: absolute
+        +size(30px,30px)
+        background-color: $color_white
+        transform: translateX(150%)
+        border-radius: 50%
+
+section#section_holi_origin
+  background-color: $color_cheese_bg_blue
+  color : $color_white
+
+  .holi_origin
+    margin-top: -10%
+    margin-left : 15%
+    padding : 250px 120px
+    width : 980px
+
+  .holi_waman
+    width : 20%
+    position: absolute
+    bottom : 0
+    left : 5%
+  .holi_fire
+    width : 1%
+    position: absolute
+    animation: fire 2s infinite linear
+
+    @keyframes fire
+      0%
+        width : 0
+      100%
+        width : 1%
+  .fire1
+    bottom : 42%
+    left : 17%
+  .fire2
+    bottom : 45%
+    left : 14%
+    animation-delay: -0.8s
+  .fire3
+    width : 0.5%
+    bottom : 40%
+    left : 11%
+    animation-delay: -0.6s
+
+.holi_origin_bottom
+  position: absolute
+  left : 0
+  bottom : 0
+
+section#section_holi_feature
+  background-color: $color_cheese_pink
+  color : $color_holi_word
+  position: relative
+  padding : 0
+  
+  .holi_feature
+    padding : 36px
+    .title,p
+      padding : 0px 120px
+
+  .holi_flower_yellow1
+    position: absolute
+    width : 15%
+    left : -5%
+    bottom : 10%
+    animation: flower_blur 4s infinite linear
+  .holi_flower_yellow2
+    position: absolute
+    width : 15%
+    right : 0
+    top : 5%
+    animation: flower_blur 4s infinite linear
+    animation-delay: -0.5s
+  .holi_flower_blue1
+    position: absolute
+    width : 5%
+    top : 0
+    left : 12%
+    animation: flower_blur 4s infinite linear
+    animation-delay: -0.8s
+  .holi_flower_blue2
+    position: absolute
+    width : 15%
+    bottom : -6%
+    left : 70%
+    animation: flower_blur 4s infinite linear
+    animation-delay: -1.5s
+  .blue_circle
+    background-color: $color_cheese_bg_blue
+    border-radius : 50%
+    position: absolute
+    animation: flower_blur 4s infinite linear
+  .l1
+    +size(30px,30px)
+    top : 0
+    left : 7%
+    animation-delay: -0.3s
+  .l2
+    +size(20px,20px)
+    top : 10%
+    left : 10%
+    animation-delay: -1.8s
+  .r1
+    +size(25px,25px)
+    bottom : 10%
+    left : 68%
+
+  .holi_feature_bottom
+    position: relative
+
+@keyframes flower_blur
+  0%
+    opacity : 0
+  50%
+    opacity : 1
+  100%
+    opacity : 0
+
+section#section_holi_game
+  background-color: $color_mala_game_bg
+
+section#section_holi_menu
+  background-color: $color_cheese_bg_dark_blue
+  padding : 150px 0px
+
+footer#footer_holi
+  background-color: $color_cheese_yellow
+  padding-top : 50px
+  .holi_footer_logo
+    background-color: $color_aptinet_bg_blue
+  .holi_footer
+    +size(80px,80px)
+    +ab_center
+
+//首頁
+.index
+  margin : 0
+  padding : 0
+  +size(100%,750px)
+  display : flex
+  justify-content : center
+  align-items : center
+  flex-direction : column
+  background-color: #ffd557
+.buttons
+  +ab_center
+  top : 90%
+.b1,.b2,.b3,.b4,.b5
+  width : 30px
+  height : 30px
+  background-color: transparent
+  border-style : none
+  margin-right: 20px
+  cursor : pointer
+  background-image: url(../../image/button_img.svg)
+.b2,.b3,.b4,.b5
+  opacity : 0.3
+.index_view
+  width : 700px
+  height : 400px
+  position: relative
+  overflow: hidden
+
+//logo
+
+.index_logo 
+  svg
+    +ab_center
+    width : 100%
+  .cls-1,.cls-2
+    stroke-dasharray : 100
+    stroke-dashoffset : 100
+    animation : dash 5s forwards
+
+@keyframes dash
+  to
+    stroke-dashoffset : 0
+
+// 起司節
+
+.cheese-fv
+  display: none
+  cursor : pointer
+  .cheese_index
+    width : 100px
+    height : 100px
+    border-radius : 50%
+    position: absolute
+    left : 50%
+    top : 50%
+    transform : translate(-50%,-50%)
+    overflow: hidden
+    animation : move 3s infinite linear
+    cursor : pointer
+    background-color: white
+    .hole
+      width : 40px
+      height : 40px
+      border-radius : 50%
+      position: absolute
+      top : 60px
+      background-color: #ffd557
+    .h2
+      width : 15px
+      height : 15px
+      right : 5px
+      top : 50px
+    .h3
+      width : 30px
+      height : 30px
+      right : 18px
+      top : 60px
+    .h4
+      width : 12px
+      height : 12px
+      left : 45px
+      top : 40px
+    .h5
+      width : 30px
+      height : 30px
+      top : 10px
+      left : 20px
+  
+  @keyframes move
+    0%
+      transform : translate(-50%,-50%) rotate(0deg)
+    30%
+      transform : translate(200px,-50%) rotate(360deg)
+    70%
+      transform : translate(-200px,-50%) rotate(0deg)
+    100%
+      transform : translate(-50%,-50%) rotate(180deg)
+
+// 打耳祭
+
+.ear-fv
+  display : none
+  cursor : pointer
+  .bow
+    position: absolute
+    width : 120px
+    height : 350px
+    left : 345px
+    top : 120px
+    animation: bow 8s infinite
+    &_base
+      position: absolute
+      top : calc(50% - 300px)
+      right : 50%
+      width : 800px
+      height : 320px
+      z-index : 100
+      
+      border-radius : 70% 30% 30% 70% / 50% 50% 50% 50%
+      border-top: 15px solid transparent
+      border-right: 15px solid white
+      border-bottom: 15px solid transparent
+      border-left: 15px solid transparent
+      
+      &::before
+        content : ""
+        position: absolute
+        top : calc(50% - 37.5px)
+        right : -15px
+        width : 25px
+        height : 75px
+        background : white
+    &_top,&_bottom
+      position: absolute
+      left : -9px
+      height : 25px
+      width : 12px
+      border-radius : 10px
+      background: white
+      z-index : 100
+    &_top
+      top : -80px
+    &_bottom
+      bottom : 200px
+  .rope
+    position: absolute
+    top : -60px
+    left : -5px
+    height : 220px
+    
+    &_top,&_bottom
+      position: absolute
+      height : 120px
+      width : 7px
+      border-radius : 10px
+      background: white
+    &_top
+      animation: row-top 4s infinite linear , row-h 4s infinite linear
+      
+    &_bottom
+      bottom : 15%
+      animation: row-bottom 4s infinite linear , row-h 4s infinite linear
+        
+  .arrow
+    position: absolute
+    width : 250px
+    height : 45px
+    top : calc(50% - 60px)
+    left : calc(50% - 75px)
+    animation: arrow 8s infinite linear, arrow-s 8s infinite linear
+    &_line
+      position: absolute
+      width : 200px
+      height : 5px
+      top : 50%
+      left : calc(50% - 120px)
+      z-index : 50
+      background: white
+      border-radius : 5px
+    &_head
+      position: absolute
+      top : 8px
+      right : 40px
+      width : 30px
+      height : 30px
+      z-index : 50
+      background-image: linear-gradient(-45deg, white 0%,white 50%,transparent 50%)
+      transform: rotateZ(-45deg)
+    &_top,&_bottom
+      position: absolute
+      left : 5px
+      width : 30px
+      height : 15px
+      background-image: linear-gradient(to right, white 0%,white 70%)
+      transform: skewX(30deg)
+    &_top
+      top : 8px
+    &_bottom
+      bottom : 5px
+      background-image: linear-gradient(to right, white 0%,white 70%)
+      transform: skewX(-30deg)
+  .wall
+    position: absolute
+    width : 5px
+    height : 200px
+    top : calc(50% - 100px)
+    right : -5px
+    top : 50px
+    z-index : 50
+    background: white
+    animation: wall 8s infinite linear
+    
+//打耳祭動畫
+
+@keyframes wall
+  0%, 80%, 96%
+    right: -10px
+  82%, 95%
+    right: 88px
+@keyframes bow
+  0%, 22%, 100%
+    top : 120px
+    left : 305px
+  30%
+    top : 120px
+    left : -50vw
+  80%
+    top : -120vmax
+    left : 345px
+
+
+@keyframes arrow
+  0%,100%
+    left: calc(50% - 75px)
+    transform: rotateZ(0deg)
+  21%
+    left: calc(50% - 170px)
+  24%, 79%
+    left: calc(100% - 350px)
+    transform-origin: right
+    transform: rotateZ(0deg)
+  80%, 82%, 84%
+    transform-origin: right
+    transform: rotateZ(-5deg)
+    left: calc(100% - 305px)
+  81%, 83%, 85%
+    transform-origin: right
+    transform: rotateZ(5deg)
+    left: calc(100% - 305px)
+  86%, 95%
+    transform-origin: right
+    transform: rotateZ(0deg)
+    left: calc(100% - 305px)
+@keyframes arrow-s
+  0%, 40%, 42%, 44%, 46%, 48%, 60%, 62%, 64%, 66%, 68%, 70%
+    top: calc(50% - 70px)
+  41%, 43%, 45%, 47%, 49%, 61%, 63%, 65%, 67%, 69%
+    top: calc(50% - 60px)
+  
+@keyframes row-h
+  0%, 12.5%, 44%, 50%
+    height: 100px
+  42.5%
+    height: 110px
+@keyframes row-top
+  0%, 50%
+    transform-origin: top
+    transform: rotateZ(0deg)
+  40%, 42.5%
+    transform-origin: top
+    transform: rotateZ(30deg)
+  47.5%
+    transform-origin: top
+    transform: rotateZ(-15deg)
+@keyframes row-bottom
+  0%, 50%
+    transform-origin: bottom
+    transform: rotateZ(0deg)
+  40%, 42.5%
+    transform-origin: bottom
+    transform: rotateZ(-30deg)
+  47.5%
+    transform-origin: bottom
+    transform: rotateZ(15deg)
+  
+//holi節
+
+.holi-fv
+  display : none
+  .circle
+    +size(1000px,1000px)
+    background-color: black
+    +ab_center
+    border-radius : 50%
+    animation: circle_throw 2s infinite linear
+    background-color: $color_white
+    @keyframes circle_throw
+      0%
+        +size(1000px,1000px)
+      50%
+        +size(0px,0px)
+      100%
+        +size(0px,0px)
+.drop
+  +ab_center
+  +size(20px,20px)
+  background-color: $color_white
+  border-radius : 50%
+  animation: drip 2s infinite linear
+  animation-delay: -1.3s
+  opacity : 0
+  &::before
+    content : ""
+    position: absolute
+    +size(0px,0px)
+    border-left : 10px solid transparent
+    border-right : 10px solid transparent
+    border-bottom: 30px solid $color_white
+    top : -22px
+.d1
+  transform: rotate(70deg)
+  +size(40px,40px)
+  left : 38%
+  top : 48%
+  &::before
+    border-left : 20px solid transparent
+    border-right : 20px solid transparent
+    border-bottom: 40px solid $color_white
+    top : -25px
+.d2
+  +size(60px,60px)
+  top : 70%
+  &::before
+    border-left : 30px solid transparent
+    border-right : 30px solid transparent
+    border-bottom: 70px solid $color_white
+    top : -45px
+.d3
+  transform: rotate(-70deg)
+  +size(50px,50px)
+  left : 58%
+  
+  &::before
+    border-left : 25px solid transparent
+    border-right : 25px solid transparent
+    border-bottom: 60px solid $color_white
+    top : -40px
+.d4
+  +size(40px,40px)
+  transform: rotate(-130deg)
+  top : 30%
+  left : 58%
+  &::before
+    border-left : 20px solid transparent
+    border-right : 20px solid transparent
+    border-bottom: 90px solid $color_white
+    top : -70px
+.d5
+  +size(50px,50px)
+  transform: rotate(150deg)
+  left : 38%
+  top : 20%
+  &::before
+    border-left : 25px solid transparent
+    border-right : 25px solid transparent
+    border-bottom: 80px solid $color_white
+    top : -60px
+.d6
+  transform: rotate(-170deg)
+  top : 35%
+.d7
+  +size(10px,10px)
+  transform : rotate(-110deg)
+  left : 65%
+  top : 40%
+  &::before
+    border-left : 5px solid transparent
+    border-right : 5px solid transparent
+    border-bottom: 10px solid $color_white
+    top : -7px
+.d8
+  +size(10px,10px)
+  left : 40%
+  top : 40%
+  transform: rotate(115deg)
+  &::before
+    border-left : 5px solid transparent
+    border-right : 5px solid transparent
+    border-bottom: 10px solid $color_white
+    top : -7px
+.d9
+  top : 65%
+  left : 40%
+  transform: rotate(30deg)
+
+
+@keyframes drip
+  0%
+    opacity : 0
+  100%
+    opacity : 1
+
+//睡魔祭
+
+.aptinet-fv
+  display : none
+  .index_aptinet
+    width : 20%
+    +ab_center
+    animation: index_flow 2s infinite linear
+
+@keyframes index_flow
+  0%
+    transform: translate(-60%,-60%)
+  50%
+    transform : translate(-60%,-65%)
+  100%
+    transform: translate(-60%,-60%)
+
+@keyframes change
+  4%
+    opacity : 1
+    filter : alpha(opacity=100)
+  20%
+    opacity : 1
+    filter : alpha(opacity=100)
+  24%
+    opacity : 
+    filter : alpha(opacity=0)
+    
