@@ -15,6 +15,7 @@ $color_mala_menu_bg : #ffccc9
 $color_menu_blue : #14a5b8
 $color_holi_word : #114b5f
 $color_introduce_orange : #ffd557
+$color_icon_orange : #ffbf00
 @mixin size($w,$h)
   width : $w 
   height : $h
@@ -48,7 +49,29 @@ p
     // display: none
   header#header_mala_index
     display: block
-
+.id_icon
+  +size(200px,100px)
+  position: absolute
+  right : 0
+  top : 5%
+.difference_icon,.introduce_icon
+  position: relative
+  +size(50px,50px)
+  border-radius: 50%
+  display : inline-block
+  margin-right: 10px
+  margin-left: 20px
+  background-color: $color_white
+  color : $color_icon_orange
+  text-align: center
+  font-size: 35px
+  a
+    text-decoration: none
+  a:hover
+    text-decoration: none
+.fa-user
+  font-size: 30px
+  text-decoration: none
 .cloud
   position: absolute
   animation: cloud 5s infinite linear
@@ -1880,7 +1903,7 @@ header#header_introduce_index
   margin : 0
   padding : 0
   .col-sm-3
-    +size(25%,1000px)
+    +size(25%,1250px)
     text-align: left
     border-radius: 0
   .web,.animate
@@ -1890,13 +1913,56 @@ header#header_introduce_index
     background-color: $color_introduce_orange
     z-index : 50
   .photo
+    position: relative
     margin-top: 150px
     +size(150px,150px)
     border-radius : 50%
     margin-right: auto
     margin-left: auto
-    border : 2px solid black
+    background-color: $color_cheese_yellow
     margin-bottom: 50px
+    &:hover
+      .introduce_poyun
+        +ab_center
+        +size(135px,135px)
+        background-image: url(../image/introduce_poyun_hover.svg)
+      .introduce_wei
+        +ab_center
+        +size(135px,135px)
+        background-image: url(../image/introduce_wei_hover.svg)
+      .introduce_kuang
+        +ab_center
+        +size(140px,140px)
+        background-image: url(../image/introduce_kuang_hover.svg)
+      .introduce_kfw
+        +ab_center
+        +size(140px,140px)
+        background-image: url(../image/introduce_kfw_hover.svg)
+  .introduce_poyun
+    +ab_center
+    +size(70px,115px)
+    top : 85px
+    background-image: url(../image/introduce_poyun.svg)
+  .introduce_wei
+    +ab_center
+    +size(95px,115px)
+    top : 90px
+    background-image: url(../image/introduce_wei.svg)
+  .introduce_kuang
+    +ab_center
+    +size(73px,115px)
+    top : 93px
+    background-image: url(../image/introduce_kuang.svg)
+  .introduce_kfw
+    +ab_center
+    +size(73px,115px)
+    top : 90px
+    background-image: url(../image/introduce_kfw.svg)
+  .introduce_mask
+    width : 105%
+    +ab_center
+    z-index: 5
+    cursor: pointer
   .introduce_title
     font-size: 20pt
     margin-left: 10px
@@ -1910,5 +1976,26 @@ section#section_introduce_menu
     color : $color_brown
   .menu
     margin-top : 150px
+
+//節慶異同
+
+header#header_difference
+  background-color: $color_cheese_pink
+  padding : 60px
+  .difference
+    margin-right: auto
+    margin-left: auto
+    +size(862px,500px)
+    background-image: url(../image/difference.svg)
+    transition-duration: 0.5s
+    cursor: pointer
+    &:hover
+      +size(862px,500px)
+      background-image: url(../image/difference_hover.svg)
+section#section_difference_menu
+  background-color: $color_cheese_bg_blue
+  p
+    color : $color_holi_word
+
 
 

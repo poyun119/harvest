@@ -16,6 +16,34 @@ p {
 * header#header_mala_index {
   display: block; }
 
+.id_icon {
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  right: 0;
+  top: 5%; }
+
+.difference_icon, .introduce_icon {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 20px;
+  background-color: #ffffff;
+  color: #ffbf00;
+  text-align: center;
+  font-size: 35px; }
+  .difference_icon a, .introduce_icon a {
+    text-decoration: none; }
+  .difference_icon a:hover, .introduce_icon a:hover {
+    text-decoration: none; }
+
+.fa-user {
+  font-size: 30px;
+  text-decoration: none; }
+
 .cloud {
   position: absolute;
   -webkit-animation: cloud 5s infinite linear;
@@ -2618,7 +2646,7 @@ header#header_introduce_index {
   padding: 0; }
   header#header_introduce_index .col-sm-3 {
     width: 25%;
-    height: 1000px;
+    height: 1250px;
     text-align: left;
     border-radius: 0; }
   header#header_introduce_index .web, header#header_introduce_index .animate {
@@ -2628,14 +2656,109 @@ header#header_introduce_index {
     background-color: #ffd557;
     z-index: 50; }
   header#header_introduce_index .photo {
+    position: relative;
     margin-top: 150px;
     width: 150px;
     height: 150px;
     border-radius: 50%;
     margin-right: auto;
     margin-left: auto;
-    border: 2px solid black;
+    background-color: #ffe491;
     margin-bottom: 50px; }
+    header#header_introduce_index .photo:hover .introduce_poyun {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 135px;
+      height: 135px;
+      background-image: url(../image/introduce_poyun_hover.svg); }
+    header#header_introduce_index .photo:hover .introduce_wei {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 135px;
+      height: 135px;
+      background-image: url(../image/introduce_wei_hover.svg); }
+    header#header_introduce_index .photo:hover .introduce_kuang {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 140px;
+      height: 140px;
+      background-image: url(../image/introduce_kuang_hover.svg); }
+    header#header_introduce_index .photo:hover .introduce_kfw {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 140px;
+      height: 140px;
+      background-image: url(../image/introduce_kfw_hover.svg); }
+  header#header_introduce_index .introduce_poyun {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 115px;
+    top: 85px;
+    background-image: url(../image/introduce_poyun.svg); }
+  header#header_introduce_index .introduce_wei {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 95px;
+    height: 115px;
+    top: 90px;
+    background-image: url(../image/introduce_wei.svg); }
+  header#header_introduce_index .introduce_kuang {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 73px;
+    height: 115px;
+    top: 93px;
+    background-image: url(../image/introduce_kuang.svg); }
+  header#header_introduce_index .introduce_kfw {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 73px;
+    height: 115px;
+    top: 90px;
+    background-image: url(../image/introduce_kfw.svg); }
+  header#header_introduce_index .introduce_mask {
+    width: 105%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    cursor: pointer; }
   header#header_introduce_index .introduce_title {
     font-size: 20pt;
     margin-left: 10px; }
@@ -2650,3 +2773,26 @@ section#section_introduce_menu {
     color: #968756; }
   section#section_introduce_menu .menu {
     margin-top: 150px; }
+
+header#header_difference {
+  background-color: #ffe7e6;
+  padding: 60px; }
+  header#header_difference .difference {
+    margin-right: auto;
+    margin-left: auto;
+    width: 862px;
+    height: 500px;
+    background-image: url(../image/difference.svg);
+    -webkit-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer; }
+    header#header_difference .difference:hover {
+      width: 862px;
+      height: 500px;
+      background-image: url(../image/difference_hover.svg); }
+
+section#section_difference_menu {
+  background-color: #6ed8e6; }
+  section#section_difference_menu p {
+    color: #114b5f; }
