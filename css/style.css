@@ -2530,10 +2530,10 @@ footer#footer_holi {
     animation-fill-mode: both;
     -webkit-animation-delay: 0.1s;
     animation-delay: 0.1s; }
-  .holi-fv .c1 {
+  .holi-fv .index_c1 {
     -webkit-animation-delay: 0.2s;
     animation-delay: 0.2s; }
-  .holi-fv .c2 {
+  .holi-fv .index_c2 {
     width: 150px;
     height: 150px;
     left: 150px;
@@ -2547,7 +2547,7 @@ footer#footer_holi {
     top: 30px;
     -webkit-animation-delay: 0.6s;
     animation-delay: 0.6s; }
-  .holi-fv .c3 {
+  .holi-fv .index_c3 {
     width: 200px;
     height: 200px;
     left: 350px;
