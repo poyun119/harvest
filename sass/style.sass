@@ -14,6 +14,7 @@ $color_mala_game_bg : #39bbcc
 $color_mala_menu_bg : #ffccc9
 $color_menu_blue : #14a5b8
 $color_holi_word : #114b5f
+$color_introduce_orange : #ffd557
 @mixin size($w,$h)
   width : $w 
   height : $h
@@ -30,7 +31,7 @@ html,body
   overflow-x : hidden
 
 *
-  font-family: '源柔ゴシックX', sans-serif
+  font-family: 'GenJyuuGothicX', sans-serif , 'Noto Sans TC', sans-serif
 .title
   font-size : 30px
   line-height : 50pt
@@ -382,10 +383,12 @@ section#section_cheese_menu
   transform: translate(-60%,-60%)
   +size(97px,90.5px)
   background-image : url(../image/menu_mala-10.svg)
-  transition-duration: 0.3s
+  transition-duration: 0.2s
+
 .col-sm-3
   text-align: center
   color : $color_white
+  border-radius: 50%  
   &:hover
     .cheese_menu
       +size(110px,86px)
@@ -1805,118 +1808,56 @@ footer#footer_holi
 .holi-fv
   display : none
   .circle
-    +size(1000px,1000px)
-    background-color: black
-    +ab_center
-    border-radius : 50%
-    animation: circle_throw 2s infinite linear
-    background-color: $color_white
-    @keyframes circle_throw
-      0%
-        +size(1000px,1000px)
-      50%
-        +size(0px,0px)
-      100%
-        +size(0px,0px)
-.drop
-  +ab_center
-  +size(20px,20px)
-  background-color: $color_white
-  border-radius : 50%
-  animation: drip 2s infinite linear
-  animation-delay: -1.3s
-  opacity : 0
-  &::before
-    content : ""
     position: absolute
-    +size(0px,0px)
-    border-left : 10px solid transparent
-    border-right : 10px solid transparent
-    border-bottom: 30px solid $color_white
-    top : -22px
-.d1
-  transform: rotate(70deg)
-  +size(40px,40px)
-  left : 38%
-  top : 48%
-  &::before
-    border-left : 20px solid transparent
-    border-right : 20px solid transparent
-    border-bottom: 40px solid $color_white
-    top : -25px
-.d2
-  +size(60px,60px)
-  top : 70%
-  &::before
-    border-left : 30px solid transparent
-    border-right : 30px solid transparent
-    border-bottom: 70px solid $color_white
-    top : -45px
-.d3
-  transform: rotate(-70deg)
-  +size(50px,50px)
-  left : 58%
-  
-  &::before
-    border-left : 25px solid transparent
-    border-right : 25px solid transparent
-    border-bottom: 60px solid $color_white
-    top : -40px
-.d4
-  +size(40px,40px)
-  transform: rotate(-130deg)
-  top : 30%
-  left : 58%
-  &::before
-    border-left : 20px solid transparent
-    border-right : 20px solid transparent
-    border-bottom: 90px solid $color_white
-    top : -70px
-.d5
-  +size(50px,50px)
-  transform: rotate(150deg)
-  left : 38%
-  top : 20%
-  &::before
-    border-left : 25px solid transparent
-    border-right : 25px solid transparent
-    border-bottom: 80px solid $color_white
-    top : -60px
-.d6
-  transform: rotate(-170deg)
-  top : 35%
-.d7
-  +size(10px,10px)
-  transform : rotate(-110deg)
-  left : 65%
-  top : 40%
-  &::before
-    border-left : 5px solid transparent
-    border-right : 5px solid transparent
-    border-bottom: 10px solid $color_white
-    top : -7px
-.d8
-  +size(10px,10px)
-  left : 40%
-  top : 40%
-  transform: rotate(115deg)
-  &::before
-    border-left : 5px solid transparent
-    border-right : 5px solid transparent
-    border-bottom: 10px solid $color_white
-    top : -7px
-.d9
-  top : 65%
-  left : 40%
-  transform: rotate(30deg)
-
-
-@keyframes drip
+    left : 250px
+    top : 10px
+    z-index: 790
+    background: $color_white
+    border-radius: 50%
+    +size(100px,100px)
+    animation: zoomIn
+    animation-duration: 0.2s
+    animation-fill-mode: both
+    border : #efefef 1px solid
+    
+  .painter
+    +size(150px,150px)
+    position: absolute
+    left : 250px
+    top : 0px
+    z-index: 799
+    animation: zoomIn
+    animation-duration: 0.2s
+    animation-fill-mode: both
+    animation-delay: 0.1s
+  .c1
+    animation-delay : 0.2s
+  .c2
+    +size(150px,150px)
+    left : 150px
+    top : 40px
+    animation-delay: 0.5s
+  .p2
+    +size(250px,250px)
+    left : 100px
+    top : 30px
+    animation-delay: 0.6s
+  .c3
+    +size(200px,200px)
+    left : 350px
+    top : 10px
+    animation-delay: 0.8s
+  .p3
+    +size(300px,300px)
+    left : 300px
+    top : 0px
+    animation-delay: 0.9s
+@keyframes zoomIn
   0%
     opacity : 0
-  100%
+    transform: scale3d(0.3,0.3,0.3)
+  50%
     opacity : 1
-
 //睡魔祭
 
 .aptinet-fv
@@ -1934,14 +1875,40 @@ footer#footer_holi
   100%
     transform: translate(-60%,-60%)
 
-@keyframes change
-  4%
-    opacity : 1
-    filter : alpha(opacity=100)
-  20%
-    opacity : 1
-    filter : alpha(opacity=100)
-  24%
-    opacity : 
-    filter : alpha(opacity=0)
-    
+//團隊介紹
+header#header_introduce_index
+  margin : 0
+  padding : 0
+  .col-sm-3
+    +size(25%,1000px)
+    text-align: left
+    border-radius: 0
+  .web,.animate
+    background-color: $color_cheese_bg_blue
+    z-index : 50
+  .game,.draw
+    background-color: $color_introduce_orange
+    z-index : 50
+  .photo
+    margin-top: 150px
+    +size(150px,150px)
+    border-radius : 50%
+    margin-right: auto
+    margin-left: auto
+    border : 2px solid black
+    margin-bottom: 50px
+  .introduce_title
+    font-size: 20pt
+    margin-left: 10px
+  .introduce_content
+    line-height : 30pt
+    font-size: 15pt
+    margin-left: 55px
+section#section_introduce_menu
+  background-color: $color_cheese_yellow
+  p
+    color : $color_brown
+  .menu
+    margin-top : 150px
+
+
