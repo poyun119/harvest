@@ -441,12 +441,9 @@ section#section_cheese_feature {
 section#section_cheese_game {
   background-color: #ffe7e6; }
 
-.game {
-  width: 700px;
-  height: 500px;
-  background-color: #ffffff;
-  margin-right: auto;
-  margin-left: auto; }
+.section_game {
+  position: relative;
+  padding: 80px; }
 
 section#section_cheese_menu {
   background-color: #6ed8e6;
@@ -2776,6 +2773,7 @@ header#header_difference {
       background-image: url(../image/difference_hover.svg); }
 
 section#section_difference_menu {
-  background-color: #6ed8e6; }
+  background-color: #6ed8e6;
+  padding: 150px 0; }
   section#section_difference_menu p {
     color: #114b5f; }
