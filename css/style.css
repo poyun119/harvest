@@ -440,6 +440,8 @@ section#section_cheese_feature {
 
 section#section_cheese_game {
   background-color: #ffe7e6; }
+  section#section_cheese_game .title {
+    color: #114b5f; }
 
 .section_game {
   position: relative;
@@ -1160,6 +1162,8 @@ section#section_aptinet_feature {
 
 section#section_aptinet_game {
   background-color: #ffe7e6; }
+  section#section_aptinet_game .title {
+    color: #114b5f; }
 
 section#section_aptinet_menu {
   background-color: #ffe491;
@@ -1690,6 +1694,8 @@ section#section_mala_feature {
 
 section#section_mala_game {
   background-color: #39bbcc; }
+  section#section_mala_game .title {
+    color: #114b5f; }
 
 section#section_mala_menu {
   padding: 150px;
@@ -2022,6 +2028,8 @@ section#section_holi_feature {
 
 section#section_holi_game {
   background-color: #39bbcc; }
+  section#section_holi_game .title {
+    color: #114b5f; }
 
 section#section_holi_menu {
   background-color: #1a7291;
