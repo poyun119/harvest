@@ -1,17 +1,21 @@
 body {
-  background-color: #ffd75f; }
+  background-color: #ffd75f;
+}
 
 .container {
   margin-top: 10px;
   width: 1000px;
-  height: 730px;
-  overflow: hidden; }
+  height: 700px;
+  overflow: hidden;
+}
 
 .flexslider.carousel {
-  border: none; }
+  border: none;
+}
 
 ol {
-  top: 85%; }
+  top: 85%;
+}
 
 ol.flex-control-nav li a {
   width: 30px;
@@ -21,8 +25,11 @@ ol.flex-control-nav li a {
   background-image: url(../../index_image/button_img.svg);
   border: 0;
   -webkit-box-shadow: none;
-  box-shadow: none; }
+          box-shadow: none;
+}
 
 ol.flex-control-nav li a.flex-active {
   background-color: transparent;
-  border: 2px solid #ff7d5f; }
+  border: 2px solid #ff7d5f;
+}
+/*# sourceMappingURL=index.css.map */
