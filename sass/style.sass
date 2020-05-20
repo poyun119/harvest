@@ -156,13 +156,12 @@ nav.navbar.at_top
   color : $color_white
 // 區域共同設定  
 section
-  padding: 60px
+  padding: 3.6vw
   position: relative
 // ---------------------------      
 section#section_cheese_video
   background-color: $color_cheese_bg_blue
   padding : 0
-
   .cheese_video_tree_left,.cheese_video_tree_right
     width : 13.9%
     position: absolute
@@ -170,24 +169,16 @@ section#section_cheese_video
   .cheese_video_tree_right
     width : 21.2%
     right : 0
-
-.video
-  padding : 350px 0px
-
-.play_btn
-  +size(150px,150px)
-  border-radius: 50%
-  background-color: $color_white
-  +ab_center
-  .tri
-    border-right: 50px solid transparent
-    border-left : 50px solid $color_cheese_bg_dark_blue
-    border-bottom : 50px solid transparent
-    border-top : 50px solid transparent
-    position: absolute
-    left : 50%
-    top : 50%
-    transform: translate(-20%,-50%)
+  .container
+    +size(100%,100%)
+    position: relative
+    iframe
+      border-radius: 20px
+      z-index : 500
+      +size(57vw,32.1vw)
+      position: relative
+      margin : 4.2vw 47vw
+      transform : translate(-50%)
 
 section#section_cheese_about
   background-color: $color_cheese_bg_blue
@@ -250,7 +241,7 @@ section#section_cheese_intro
 
 .cheese
   position: absolute
-  +size(80px,80px)
+  +size(5vw,5vw)
   border-radius : 50%
   background-color: $color_cheese_yellow
   overflow: hidden
@@ -259,78 +250,157 @@ section#section_cheese_intro
     position: absolute
     background-color: $color_cheese_red
   .c1
-    +size(20px,20px)
+    +size(1.25vw,1.25vw)
     top : 30%
     left : 10%
   .c2
-    +size(30px,30px)
+    +size(1.875vw,1.875vw)
     top : 50%
     right : 20%
   .c3
-    +size(30px,30px)
+    +size(1.875vw,1.875vw)
     top : 0
     right : 10%
   .line
     +ab_center
     background-color: $color_line_red
-    border : 5px solid $color_white
+    border : 0.3vw solid $color_white
   .l1
-    +size(120px,20px)
+    +size(7.5vw,1.25vw)
   .l2
-    +size(20px,120px)
-
+    +size(1.25vw,7.5vw)
+.cheese_intro_bg
+  width : 100vw
 .scroll_cheese_intro
-  offset-path: path('M0,282.54s65-22.67,106.5-4c15.12,6.8,27,26.59,34.5,41.38,8.59,16.95,24.91,97,33,147.12,11.61,71.89,3,108.5,86,110.5s441.36-35.94,524-32,144.07-22,163.46-48.5,33-66,33-66,49.26-235.85,159-334.5c94.55-85,158.29,105,174,166,15.2,59.11,60.85,226.21,99.49,74.56,4.14-16.22,13.73-29.59,24.07-37.56,26.14-20.16,74.5-10.5,84.52,48.38,1,5.61,3.55,10.82,5.21,16.27,3.22,10.63,18.17,49.68,64.1,50')
-  offset-distance : 0%
   animation: scroll_cheese_intro 5s infinite alternate linear
   @keyframes scroll_cheese_intro
       0%
-        offset-distance : 0%
+        left : -10vw
+        top : 30%
+        transform: rotate(0deg)
+      3%
+        left : 0vw
+        top : 25%
+        transform: rotate(90deg)
+      5%
+        left : 2vw
+        top : 25%
+        transform: rotate(180deg)
+      8%
+        left : 4vw
+        top : 30%
+        transform: rotate(270deg)
+      12%
+        left : 6vw
+        top : 36%
+        transform: rotate(360deg)
+      14%
+        left : 7vw
+        top : 40%
+        transform: rotate(450deg)
+      17%
+        left : 8vw
+        top : 50%
+        transform: rotate(540deg)
+      20%
+        left : 9vw
+        top : 55%
+        transform: rotate(630deg)
+      23%
+        left : 12vw
+        top : 56%
+        transform: rotate(720deg)
+      60%
+        left : 57vw
+        top : 58%
+        transform: rotate(2160deg)
+      68%
+        left : 62vw
+        top : 40%
+        transform: rotate(2520deg)
+      75%
+        left : 68vw
+        top : 20%
+        transform: rotate(2700deg)
+      78%
+        left : 72vw
+        top : 12%
+        transform: rotate(2790deg)
+      81%
+        left : 76vw
+        top : 8%
+        transform: rotate(2880deg)
+      84%
+        left : 81vw
+        top : 15%
+        transform: rotate(2970deg)
+      90%
+        left : 87vw
+        top : 38%
+        transform: rotate(3150deg)
+      93%
+        left : 91vw
+        top : 32%
+        transform: rotate(3240deg)
+      96%
+        left : 93vw
+        top : 30%
+        transform: rotate(3330deg)
       100%
-        offset-distance : 100%
-        transform: rotate(1800deg)
+        left : 96vw
+        top : 33%
+        transform: rotate(3420deg)
+
+      // 100%
+      //   offset-distance : 100%
+      //   transform: rotate(1800deg)
 
 section#section__cheese_origin
   background-color: $color_cheese_bg_dark_blue
   position: relative
   .cheese_origin
     color : $color_white
-    padding : 150px
+    padding : 20vw
     
   .cheese_origin_castle
+    +size(90vw,50vw)
     position: absolute
-    width : 90%
-    bottom : 0
     right : 0
+    bottom : 0
+    img
+      width : 100%
+      position: absolute
+      right : 0
+      bottom : 0
   .scroll_cheese_origin
     animation: scroll_cheese_origin 4s infinite linear
     @keyframes scroll_cheese_origin
       0%
-        right : 10%
-        top : 12%
+        right : 11vw
+        top : 20%
         transform: rotate(0deg)
       20%
-        right : 30%
-        top : 28%
+        right : 30vw
+        top : 35%
         transform: rotate(-360deg)
       40%
-        right : 10%
-        top : 35%
+        right : 9vw
+        top : 41%
         transform: rotate(0deg)
       60%
-        right : 35%
-        top : 58%
+        right : 36vw
+        top : 64%
         transform: rotate(-360deg)
       62%
-        right: 35%
-        top: 61%
+        right : 35vw
+        top : 65%
       80%
-        right : 20%
-        top : 73%
+        right : 17vw
+        top : 76.5%
         transform: rotate(0deg)
       100%
-        right : -10%
-        top : 75%
+        right : -10vw
+        top : 77.5%
         transform: rotate(540deg)
 
         
@@ -342,7 +412,7 @@ section#section_cheese_feature
     position: absolute
     top : -2.3px
     right : 0
-    width : 90%
+    width : 90vw
 
   .cheese_feature
     margin : 10%
@@ -361,24 +431,24 @@ section#section_cheese_feature
         transform: rotate(1800deg)
   .cheese_feature_bottom
     position: absolute
-    bottom : 0
+    bottom : -10px
     left : 0
     width : 100%
 
 section#section_cheese_game
   background-color: $color_cheese_pink
-.game
-  +size(700px,500px)
-  background-color: $color_white
-  margin-right: auto
-  margin-left: auto
-
+  .title 
+    color : $color_holi_word
+.section_game
+  position: relative
+  padding : 4.8vw
+  +size(57vw,32.1vw)
 section#section_cheese_menu
   background-color: $color_cheese_bg_blue
-  padding : 150px
+  padding : 9vw 0vw
 .menu
   position: relative
-  +size(150px,150px)
+  +size(9vw,9vw)
   background : linear-gradient(45deg,$color_menu_blue 50%,$color_mala_game_bg  50%,$color_mala_game_bg  100%)
   border-radius : 50%
   cursor : pointer
@@ -386,17 +456,17 @@ section#section_cheese_menu
   margin-left: auto
 .cheese_menu
   +ab_center
-  +size(100px,100px)
+  +size(6vw,6vw)
   background-image : url(../image/menu_cheese-10.svg)
   transition-duration: 0.3s
 .aptinet_menu
   +ab_center
-  +size(100px,102px)
+  +size(6vw,6.2vw)
   background-image : url(../image/menu_aptinet-10.svg)
   transition-duration: 0.3s
 .holi_menu
   +ab_center
-  +size(109px,100px)
+  +size(6.485vw,5.94vw)
   background-image : url(../image/menu_holi-10.svg)
   transition-duration: 0.3s
 .mala_menu
@@ -404,7 +474,7 @@ section#section_cheese_menu
   top : 60%
   left : 60%
   transform: translate(-60%,-60%)
-  +size(97px,90.5px)
+  +size(6vw,5.6vw)
   background-image : url(../image/menu_mala-10.svg)
   transition-duration: 0.2s
 
@@ -414,18 +484,18 @@ section#section_cheese_menu
   border-radius: 50%  
   &:hover
     .cheese_menu
-      +size(110px,86px)
+      +size(6.6vw,5.2vw)
       background-image : url(../image/menu_cheese_hover-10.svg)
     .aptinet_menu
       left : 53%
-      +size(89px,100px)
+      +size(5.3vw,6vw)
       background-image : url(../image/menu_aptinet_hover-10.svg)
     .holi_menu
-      +size(130px,70px)
+      +size(7.8vw,4.2vw)
       background-image : url(../image/menu_holi_hover-10.svg)
     .mala_menu
       +ab_center
-      +size(67px,108px)
+      +size(4vw,6.5vw)
       background-image : url(../image/menu_mala_hover-10.svg)
 footer#footer_cheese
   background-color: $color_cheese_yellow
@@ -435,13 +505,13 @@ footer#footer_cheese
   background-color: $color_cheese_bg_blue
 .footer_logo
   position: relative
-  +size(100px,100px)
+  +size(6vw,6vw)
   background-color: $color_menu_blue
   border-radius : 50%
   margin-right: auto
   margin-left: auto
 .cheese_footer
-  +size(70px,70px)
+  +size(4.2vw,4.2vw)
   +ab_center
 .footer
   margin : 30px 50%
@@ -530,6 +600,16 @@ section#section_aptinet_video
     position: absolute
     right : 10%
     bottom : 35%
+  .container
+    +size(100%,100%)
+    position: relative
+    iframe
+      border-radius: 20px
+      z-index : 500
+      +size(57vw,32.1vw)
+      position: relative
+      margin : 4.2vw 47vw
+      transform : translate(-50%)
 
 section#section_aptinet_about
   background-color: $color_cheese_bg_dark_blue
@@ -540,20 +620,19 @@ section#section_aptinet_about
     color : $color_white
     font-size: 40pt
     right : 18%
-    top : 30%
+    top : 50%
   .aptinet_about_bottom
     position: absolute
     width : 30%
     right : 0
-    top : -10%
+    top : 10%
   .nebutasai
-    margin-top : -20%
     width : 100%
   #nebutasai_face
     position: absolute
     width : 30%
     left : 5%
-    top : 2%
+    top : 22%
 
 section#section_aptinet_intro
   background-color: $color_cheese_bg_dark_blue
@@ -724,7 +803,7 @@ section#section_aptinet_origin
     margin : 150px 100px
 
   .aptinet_origin_bottom
-    height : 290px
+    width : 100vw
 
 section#section_aptinet_feature
   background-color: $color_white
@@ -734,17 +813,17 @@ section#section_aptinet_feature
 
   .aptinet_bell
     position: absolute
-    top : -170px
-    left : 160px
+    left : 10vw
+    transform: translateY(-117%)
     .rope_bell
-      +size(5px,150px)
+      +size(0.3vw,9.375vw)
       background-color: $color_brown
       transform-origin : top
       animation : rope_swing 6s linear infinite
     .ring_bell
-      +size(80px,80px)
+      +size(5vw,5vw)
       +ab_center
-      top : 120%
+      top : 115%
       animation: ring_swing 6s infinite linear
 
 
@@ -752,11 +831,11 @@ section#section_aptinet_feature
     0%
       transform: rotate(0deg)
     20%
-      transform: rotate(10deg)
+      transform: rotate(5deg)
     40%
-      transform: rotate(-10deg)
+      transform: rotate(-8deg)
     50%
-      transform: rotate(10deg)
+      transform: rotate(5deg)
       opacity : 1
     55%
       opacity : 0
@@ -765,13 +844,13 @@ section#section_aptinet_feature
 
   @keyframes ring_swing
     0%
-      transform: translate(-40px,-40px) rotate(0deg)
+      transform: translate(-2.5vw,-2.1vw) rotate(0deg)
     20%
-      transform: translate(-70px,-38px) rotate(10deg)
+      transform: translate(-3.5vw,-2.4vw) rotate(5deg)
     40%
-      transform: translate(-5px,-38px) rotate(-10deg)
+      transform: translate(-0.6vw,-2.7vw) rotate(-8deg)
     45%
-      transform: translate(-40px,-40px) rotate(0deg)
+      transform: translate(-2.4vw,-2.7vw) rotate(5deg)
       top : 120%
       left : 0
     60%
@@ -852,7 +931,8 @@ section#section_aptinet_feature
 
 section#section_aptinet_game
   background-color: $color_cheese_pink
-
+  .title
+    color : $color_holi_word
 section#section_aptinet_menu
   background-color: $color_cheese_yellow
   padding : 150px 0px
@@ -936,6 +1016,16 @@ header#header_mala_index
 section#section_mala_video
   background-color : $color_cheese_bg_blue
   z-index: 2
+  .container
+    +size(100%,100%)
+    position: relative
+    iframe
+      border-radius: 20px
+      z-index : 500
+      +size(57vw,32.1vw)
+      position: relative
+      margin : 4.2vw 45vw
+      transform : translate(-50%)
 
   .mala_video_bottom
     position: absolute
@@ -965,6 +1055,7 @@ section#section_mala_about
     position: absolute
   .mala_about_bg3
     position: absolute
+    width : 100vw
     bottom : 0
     z-index : 5
   .mala_about_cloud
@@ -1008,10 +1099,11 @@ section#section_mala_intro
   position: relative
   color : $color_mala_word
   .mala_intro_top
-    position: absolute
-    width : 63%
-    top : -3px
-    left : 45.5%
+    position: relative
+    margin-top: -6vw
+    width : 65vw
+    left : 46%
+    z-index : 500
     transform: translateX(-50%)
 
   .container
@@ -1062,15 +1154,15 @@ section#section_mala_intro
     bottom : 38%
     animation-delay: -1s
   .mala_catcher
-    width: 6%
+    width: 6vw
     position: absolute
-    bottom : 4%
+    bottom : 4vh
     left : 19%
     animation : catcher 4s infinite linear
   .mala_meat
     position: absolute
-    width : 8%
-    bottom : 20%
+    width : 8vw
+    bottom : 20vh
     left : 18%
     animation: meat_falling 4s infinite linear
   .meat1
@@ -1092,7 +1184,7 @@ section#section_mala_intro
     left : 35%
     transform: translateY(0px)
   10%
-    transform: translateY(10px)
+    transform: translateY(0.6vh)
   20%
     transform: translateY(0px)
   30%
@@ -1101,15 +1193,15 @@ section#section_mala_intro
   40%
     transform: translateY(0px)
   45%
-    transform: translateY(10px)
+    transform: translateY(0.6vh)
   60%
     left : 61%
-    transform: translateY(10px)
+    transform: translateY(0.6vh)
   70%
     left : 50%
     transform: translateY(0px)
   75%
-    transform: translateY(10px)
+    transform: translateY(0.6vh)
   85%
     left : 50%
   100%
@@ -1119,38 +1211,38 @@ section#section_mala_intro
 @keyframes meat_falling
   0%
     opacity : 0
-    bottom : 100%
+    bottom : 40vw
   10%
     opacity : 1
   80%
     opacity : 1
-    bottom : 20%
+    bottom : 11vw
     opacity : 1
   93%
     opacity : 0.9
   94%
     opacity : 0
   100%
-    bottom : 20%
+    bottom : 11vw
     opacity : 0
 @keyframes meat_falling_down
   0%
     opacity : 0
-    bottom : 100%
+    bottom : 40vw
   10%
     opacity : 1
   80%
     opacity : 1
-    bottom : 10%
+    bottom : 5vw
     transform: rotate(0deg)
   90%
-    bottom : 12%
+    bottom : 7vw
     transform: rotate(-15deg)
   91%
     transform: rotate(0deg)
   100%
     transform: rotate(15deg)
-    bottom : 10%
+    bottom : 5vw
     
     
 
@@ -1195,61 +1287,63 @@ section#section_mala_feature
     top : 80%
   .mala_origin_bottom
     position: relative
-    width : 1520px
+    width : 100vw
   .mala_origin_tree
     position: absolute
     width : 3%
   .tree1
-    left : -10px
-    bottom : 260px
+    left : -0.6vw
+    bottom : 18vw
   .tree2
-    bottom : 110px
-    left : 180px
+    bottom : 6.6vw
+    left : 10.8vw
   .tree3
     width : 2.5%
-    left : 250px
-    bottom : 100px
+    left : 15vw
+    bottom : 6vw
   .tree4
     width : 2.5%
-    left : 310px
-    bottom : 120px
+    left : 18.6vw
+    bottom : 8vw
   .tree5
     width : 2%
-    left : 400px
-    bottom : 100px
+    left : 24vw
+    bottom : 8vw
   .tree6
     width : 2%
-    left : 650px
-    bottom : 30px
+    left : 30vw
+    bottom : 3.6vw
   .tree7
-    left : 700px
-    bottom : 20px
+    left : 39vw
+    bottom : 1.2vw
   .tree8
     width : 2%
-    left : 1100px
-    bottom : 60px
+    left : 66vw
+    bottom : 5.5vw
   .tree9
     width : 3.5%
-    left : 1170px
-    bottom : 60px
+    left : 70.2vw
+    bottom : 3.6vw
   .tree10
     width : 2%
-    left : 1250px
-    bottom : 140px
+    left : 75vw
+    bottom : 4vw
   .tree11
     width : 2.5%
-    left : 1300px
-    bottom : 160px
+    left : 78vw
+    bottom : 5.6vw
   .tree12
     width : 2%
-    left : 1390px
-    bottom : 150px
+    left : 83.4vw
+    bottom : 11vw
   .tree13
-    left : 1445px
-    bottom : 110px
+    left : 86.7vw
+    bottom : 12vw
 
 section#section_mala_game
   background-color: $color_mala_game_bg
+  .title 
+    color : $color_holi_word
 
 section#section_mala_menu
   padding : 150px
@@ -1288,7 +1382,16 @@ header#header_holi_index
   
 section#section_holi_video
   background-color: $color_mala_game_bg
-
+  .container
+    +size(100%,100%)
+    position: relative
+    iframe
+      border-radius: 20px
+      z-index : 500
+      +size(57vw,32.1vw)
+      position: relative
+      margin : 4.2vw 45vw
+      transform : translate(-50%)
 
 section#section_holi_about
   background-color: $color_mala_game_bg
@@ -1419,8 +1522,8 @@ section#section_holi_origin
   .holi_origin
     margin-top: -10%
     margin-left : 15%
-    padding : 250px 120px
-    width : 980px
+    padding : 15vw 7.2vw
+    width : 60vw
 
   .holi_waman
     width : 20%
@@ -1436,18 +1539,17 @@ section#section_holi_origin
       0%
         width : 0
       100%
-        width : 1%
+        width : 1vw
   .fire1
-    bottom : 42%
-    left : 17%
+    bottom : 22vw
+    left : 17vw
   .fire2
-    bottom : 45%
-    left : 14%
+    bottom : 25vw
+    left : 14vw
     animation-delay: -0.8s
   .fire3
-    width : 0.5%
-    bottom : 40%
-    left : 11%
+    bottom : 22vw
+    left : 11vw
     animation-delay: -0.6s
 
 .holi_origin_bottom
@@ -1526,6 +1628,8 @@ section#section_holi_feature
 
 section#section_holi_game
   background-color: $color_mala_game_bg
+  .title 
+    color : $color_holi_word
 
 section#section_holi_menu
   background-color: $color_cheese_bg_dark_blue
@@ -1539,7 +1643,6 @@ footer#footer_holi
   .holi_footer
     +size(80px,80px)
     +ab_center
-
 //首頁
 .index
   margin : 0
@@ -1550,6 +1653,11 @@ footer#footer_holi
   align-items : center
   flex-direction : column
   background-color: #ffd557
+  a
+    text-decoration: none
+    color : white
+    text-align: center
+    font-size: 20pt
 .buttons
   +ab_center
   top : 90%
@@ -1563,6 +1671,8 @@ footer#footer_holi
   background-image: url(../../image/button_img.svg)
 .b2,.b3,.b4,.b5
   opacity : 0.3
+.c_index
+  height : 100%
 .index_view
   width : 700px
   height : 400px
@@ -1585,7 +1695,6 @@ footer#footer_holi
     stroke-dashoffset : 0
 
 // 起司節
-
 .cheese-fv
   display: none
   cursor : pointer
@@ -1638,7 +1747,9 @@ footer#footer_holi
       transform : translate(-200px,-50%) rotate(0deg)
     100%
       transform : translate(-50%,-50%) rotate(180deg)
-
+.cheese_pic
+  width : 76.5%
+  border-radius : 10px
 // 打耳祭
 
 .ear-fv
@@ -1833,7 +1944,7 @@ footer#footer_holi
   .circle
     position: absolute
     left : 250px
-    top : 10px
+    top : 80px
     z-index: 790
     background: $color_white
     border-radius: 50%
@@ -1847,7 +1958,7 @@ footer#footer_holi
     +size(150px,150px)
     position: absolute
     left : 250px
-    top : 0px
+    top : 70px
     z-index: 799
     animation: zoomIn
     animation-duration: 0.2s
@@ -1858,22 +1969,22 @@ footer#footer_holi
   .index_c2
     +size(150px,150px)
     left : 150px
-    top : 40px
+    top : 70px
     animation-delay: 0.5s
   .p2
     +size(250px,250px)
     left : 100px
-    top : 30px
+    top : 60px
     animation-delay: 0.6s
   .index_c3
-    +size(200px,200px)
+    +size(150px,150px)
     left : 350px
-    top : 10px
+    top : 60px
     animation-delay: 0.8s
   .p3
-    +size(300px,300px)
+    +size(250px,250px)
     left : 300px
-    top : 0px
+    top : 50px
     animation-delay: 0.9s
 @keyframes zoomIn
   0%
@@ -1902,6 +2013,9 @@ footer#footer_holi
 header#header_introduce_index
   margin : 0
   padding : 0
+  .container
+    width : 100%
+    padding : 0
   .col-sm-3
     +size(25%,1250px)
     text-align: left
@@ -1981,19 +2095,20 @@ section#section_introduce_menu
 
 header#header_difference
   background-color: $color_cheese_pink
-  padding : 60px
+  padding : 3.6vw
   .difference
     margin-right: auto
     margin-left: auto
-    +size(862px,500px)
+    +size(51.72vw,30vw)
     background-image: url(../image/difference.svg)
     transition-duration: 0.5s
     cursor: pointer
     &:hover
-      +size(862px,500px)
+      +size(51.72vw,30vw)
       background-image: url(../image/difference_hover.svg)
 section#section_difference_menu
   background-color: $color_cheese_bg_blue
+  padding : 9vw 0
   p
     color : $color_holi_word
 
